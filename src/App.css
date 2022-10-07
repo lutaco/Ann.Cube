@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+body, html {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #fff6ea;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  min-height: 100%;
+}
+
+
+.app {
+  display: flex;
+  flex-grow: 100;
+  padding-top: 40px;
+}
+
+
+.fragment-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -40px;
+  flex-direction: column;
+}
+
+.fragment-box {
+  display: flex;
+  position: relative;
+}
+
+
+.fragment {
+  flex: 0 0 auto;
+  height: 80px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.fragment_disabled {
+  background-color: #c9c7c7;
+}
+
+
+.main {
+  flex-grow: 10;
+}
+
+
+
+.demoWrapper {
+  display: flex;
+  position: relative;
+  flex-grow: 10;
+}
+
+.scroll-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+}
+
+.scroll-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+}
+
+
+.logo {
+  height: calc(300px + min(200px, 100vh / 8));
+  margin: 0 auto;
+  display: block;
+  padding-top: min(200px, 100vh / 8);
+}
+
+
+.logo-c {
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+.logoName {
+  top: 0;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
+  text-decoration: none;
+  margin: 10px;
+  z-index: 100;
+  color: #ffd58f
+}
+
+.logoNameSpan {
+  color: #fcb33d
+}
+
+.Modal {
+  top: 100px;
+  left: 0;
+  right: 0;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 24px 72px 40px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #fffaf6;
+  border: 2px solid #faf3ee;
+  outline: none !important;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.actions {
+  display: flex;
+  margin-top: 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.actions_item {
+  color: #603909;
+  text-decoration: none;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dooots {
+  flex-grow: 100;
+  border-radius: 5px;
+  display: flex;
+}
+
+.dropps {
+  border: 1px dashed rgb(129 119 106 / 43%);
+  flex-grow: 100;
+  border-radius: 5px;
+}
+
+.dropps_over {
+  border: 1px solid rgb(129 119 106 / 43%) !important;
+}
+
+
+#root-canvas {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+
+@media (max-aspect-ratio: 8/10) {
+  #root {
+    min-height: 0 !important;
   }
-  to {
-    transform: rotate(360deg);
+  .app {
+    min-height: 100% !important;
+    flex-direction: column !important;
   }
+
+  .fragment-container {
+    margin-top: 0 !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+  }
+
+
+  .demoWrapper {
+    aspect-ratio: 8 / 10 !important;
+  }
+
+  .fragment-box {
+    display: flex;
+    position: relative;
+  }
+
 }
