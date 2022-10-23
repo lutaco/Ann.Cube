@@ -4,10 +4,11 @@ import {
     createBrowserRouter, RouterProvider,
 } from "react-router-dom";
 import {Main} from "./pages/Main";
-import {Visio} from "./pages/Visio";
+import {View} from "./pages/View";
 import {Provider} from "react-redux";
 import {store} from "./store";
 import * as THREE from 'three';
+import {Constructor} from "./pages/Constructor";
 
 
 const router = createBrowserRouter([
@@ -16,9 +17,13 @@ const router = createBrowserRouter([
         element: <Main />,
     },
     {
-        path: "/visio",
-        element: <Visio />,
+        path: "/view",
+        element: <View />,
     },
+    {
+        path: "/constructor",
+        element: <Constructor />
+    }
 ]);
 
 

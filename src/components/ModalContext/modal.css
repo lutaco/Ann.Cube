@@ -1,0 +1,45 @@
+.modal-content__solution {
+    margin-top: 15px;
+    flex-grow: 100;
+    border-radius: 5px;
+    display: flex;
+}
+
+.modal-content__top {
+    color: #603909;
+    text-transform: uppercase;
+}
+
+.modal-content {
+    width: 100%;
+    aspect-ratio: 18 / 10;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffaf6;
+    border: 2px solid #faf3ee;
+    outline: none !important;
+    border-radius: 8px;
+ }
+
+
+@media (max-width: 620px) {
+    .modal-content {
+        aspect-ratio: unset;
+        height: 340px;
+    }
+}
+
+.modal-content__drop-area {
+    border: 1px solid rgb(129 119 106 / .20);
+    flex-grow: 100;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.modal-content__drop-area_over {
+    border: 1px solid rgb(129 119 106 / .50) !important;
+}
+

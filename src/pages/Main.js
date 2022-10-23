@@ -9,7 +9,8 @@ export function Main() {
         <div className='logo-c'>
             <img src={cube} alt="cube" className="logo"/>
             <div className='actions'>
-                <Link to="/visio" className="actions_item">Пощупать</Link>
+                <Link to="/view" className="actions_item">Пощупать</Link>
+                <Link to="/constructor" className="actions_item">Решить</Link>
             </div>
         </div>
     )

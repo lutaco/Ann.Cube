@@ -1,0 +1,148 @@
+.constructor__cube-button-wrapper {
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    cursor: pointer
+}
+
+.constructor__cube-button {
+    font-family: Montserrat, sans-serif;
+    color: #603909;
+    font-weight: 600;
+    position: absolute;
+    line-height: 120px;
+    font-size: 38px;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center
+}
+
+
+.constructor__constructor-wrapper {
+    text-align: center;
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-top: 180px;
+    color: #603909;
+}
+
+
+.constructor__constructor-wrapper-cube-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.constructor__levels-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 620px) {
+    .constructor__levels-panel {
+        position: absolute;
+        left: 0;
+        top: 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+
+.constructor-L {
+    border: none !important;
+    color: #603909;
+    position: relative;
+    background: #ffd58f35 !important;
+    width: 80px;
+    border-radius: 2px;
+    margin: 10px 4px 0 4px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.constructor-L_active {
+    background: #ffd58fA5 !important;
+}
+
+
+.constructor-L-plus {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 0;
+
+    margin: 10px 4px 0 4px;
+    background: #ffd58f35 !important;
+    width: 80px;
+}
+
+
+.constructor-container {
+    padding: 0 10px;
+    position: relative;
+    /*display: flex;*/
+    display: block;
+    flex-direction: column;
+}
+
+@media (min-width: 620px) {
+    .constructor-container {
+        padding: 0 140px 80px 120px;
+    }
+}
+
+.constructor-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 0 auto;
+    padding-bottom: 20px;
+}
+
+
+.constructor-figures {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 620px) {
+    .constructor-figures {
+        display: none;
+    }
+}
+
+
+.constructor-grid {
+    display: grid;
+    background-color: #ffd58f80;
+    gap: 4px;
+    margin: 20px 10px
+}
+
+.constructor-item {
+    aspect-ratio: 1;
+    padding: 8px;
+    text-align: center;
+    line-height: 120px;
+    display: flex;
+    background-color: #fff6ea;
+}
+
+.constructor__constructor-figures_out {
+    display: none;
+}
+
+@media (min-width: 620px) {
+    .constructor__constructor-figures_out {
+        position: absolute;
+        right: 10px;
+        flex-direction: column;
+        width: 100px;
+        bottom: unset;
+        display: block !important;
+        top: 110px;
+    }
+}

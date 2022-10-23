@@ -86,6 +86,22 @@ export const renderCube = (root, width, height, cubeData, renderer, addScene, re
     scene.add(ambient);
     addScene(scene);
 
+
+    let px = 1;
+    let py = 1;
+    let animated = false;
+
+    function animate() {
+        if (Math.random() < 0.001) px = -px;
+        if (Math.random() < 0.001) py = -py;
+
+        cubeGroup.rotateX(0.005 * px);
+        cubeGroup.rotateY(0.005 * py)
+        if (animated) requestAnimationFrame(animate);
+    }
+
+    animate()
+
     return {
         setVisible: items => {
             groups.forEach((group, num) => {
@@ -96,6 +112,14 @@ export const renderCube = (root, width, height, cubeData, renderer, addScene, re
             scene.clear();
             removeScene(scene);
             renderer.clear();
+        },
+        fire: enable => {
+            if (!enable) {
+                animated = false;
+                return
+            }
+            animated = true;
+            animate();
         }
     }
 }
@@ -120,15 +144,15 @@ export class Cube extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         this.cube.setVisible(this.props.items)
+        if (prevProps.fired !== this.props.fired) this.cube.fire(this.props.fired)
     }
 
     componentWillUnmount() {
         this.cube.cancel()
     }
 
-
     render() {
         console.log('render')
-        return <div ref={this.root} style={{flexGrow: 100}}/>;
+        return <div ref={this.root} style={{flexGrow: 100, marginTop: -100}}/>;
     }
 }

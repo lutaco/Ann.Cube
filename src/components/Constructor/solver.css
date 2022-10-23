@@ -1,0 +1,137 @@
+
+
+.constructor__solution-builder {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.constructor__solution-progress-bar {
+    display: flex;
+    flex-direction: row;
+    padding: 3px 0;
+}
+
+.constructor__solution-progress-bar-cube {
+    margin: 2px 2px 0 2px;
+    width: 6px;
+    aspect-ratio: 1;
+    background: orange;
+}
+
+.constructor__solution-progress-bar-filler {
+    margin: 2px 2px 0 2px;
+    width: 6px;
+    line-height: 4px;
+    height: 6px;
+    text-align: center;
+    color: #ffa50080;
+}
+
+
+.constructor__solution-progress-time {
+    color: #603909;
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+
+
+.constructor__solution-file-name {
+    color: #603909;
+    right: 0;
+    font-weight: 600;
+    text-align: center
+}
+
+
+.constructor__solution-logs-item {
+
+}
+
+.constructor__solution-logs-item_hidden {
+    visibility: hidden;
+}
+
+.constructor__solution-modal {
+    margin-top: 40px;
+}
+
+.constructor__solution-logs {
+    margin-top: 20px;
+}
+
+.constructor__solution-files {
+    border-top: solid 2px #ff7c0040 ;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.constructor__solution-logs-item {
+    color: #603909;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 8px;
+    list-style: none;
+}
+
+.constructor__solution-container-top {
+    display: flex;
+}
+
+.constructor__solution-creator-button {
+    background: none;
+    border: none;
+    color: #603909;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.constructor__solution-logs_item_hidden {
+    display: none;
+}
+
+.constructor__solution-close-modal {
+    margin-left: auto;
+    padding: 2px 8px
+}
+
+
+.constructor__solution-upload-new {
+    color: #603909;
+}
+
+.constructor__solution-upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.constructor__solution-container-top {
+
+}
+
+.constructor__solution-browse-input {
+    display: none;
+}
+
+.constructor__solution-browse-and {
+    text-transform: uppercase;
+    margin-top: 8px;
+    color: #60390980;
+    font-size: 14px;
+}
+
+.constructor__solution-browse {
+    color: #603909;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.constructor__solution-span {
+    text-transform: lowercase;
+}

@@ -1,0 +1,17 @@
+.view__upload-tab {
+    background: none;
+    border: none;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #60390950;
+}
+
+.view__upload-tab_active {
+    color: #603909A0 !important;
+}
+
+
+.view__modal {
+    margin-top: 40px
+}

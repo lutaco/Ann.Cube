@@ -11,3 +11,12 @@ export function shadeColor(color, percent) {
         .map(x => x.length === 1 ? "0" + x : x)
         .reduce((sum, x) => sum + x, '#')
 }
+
+
+export const csn = (...classNames) => classNames.filter(Boolean).join(' ')
+
+
+export const classSet = cls => {
+    const classes = Object.keys(cls).filter(className => cls[className]);
+    return csn(...classes)
+}
